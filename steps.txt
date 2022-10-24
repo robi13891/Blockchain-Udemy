@@ -1,0 +1,8 @@
+- npm init to create package.json
+- create blockchain data structure with two properties: chain and newTransactions
+- create createNewBlock method
+- export blockchain from blockchain.js import to test.js
+- add getLastBlock method
+- add createNewTransaction method
+- npm i sha256 --save to import sha256 hashing function
+- add hashBlock method
