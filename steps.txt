@@ -6,3 +6,5 @@
 - add createNewTransaction method
 - npm i sha256 --save to import sha256 hashing function
 - add hashBlock method
+- add proof of work method
+- create a genesis block

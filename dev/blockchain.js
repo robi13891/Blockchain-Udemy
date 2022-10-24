@@ -1,10 +1,12 @@
 const sha256 = require("sha256");
 
 //Blockchain data structure
-export default class Blockchain{
+class Blockchain{
     constructor(){
         this.chain = [];
         this.pendingTransactions = []; 
+        this.difficulty = 4;
+        this.createNewBlock(0, "0", "0"); // any param is ok
     }
 
     createNewBlock(nonce, hash, previousBlockHash){
@@ -45,4 +47,17 @@ export default class Blockchain{
         return hash;
     }
 
+    proofOfWWork(previousBlockHash, currentBlockData){
+        let nonce = 0;
+        let hash = this.hashBlock(previousBlockHash, currentBlockData, nonce);
+        while (hash.substring(0,4) !== Array(this.difficulty + 1).join("0")) {
+            nonce ++;
+            hash = this.hashBlock(previousBlockHash, currentBlockData, nonce);
+        }
+        return nonce;
+        //
+    }
+
 }
+
+module.exports = Blockchain;

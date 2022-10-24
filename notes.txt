@@ -1,3 +1,15 @@
 Source: https://github.com/erictraub/Learn-Blockchain-By-Building-Your-Own-In-JavaScript
 
-Definition: Immutable Distributed Ledger
+- Definition: Immutable Distributed Ledger
+- Proof of Work: 
+    we wanna make sure that each mined block is legitimate 
+    (correct data and correct transactions) and we do it with proof of work mechanism.
+    When is to calculate the hash of a block we require that the hash starts
+    with a fixed number of zeros.
+    This method secures our blockchain because if someone wants to corrupt a previous
+    block a lot of computer power is needed because he has to calculate again that block 
+    hash and all the followers.
+    Moreover the network will reject his proposal because is different form all of
+    the others.
+    WHAT IF AN ADDRESS POSSESS THE MAJORITY OF NODES?
+
